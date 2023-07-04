@@ -27,24 +27,20 @@ function getData() {
     liHR.appendChild(hr);
     liA.appendChild(a);
     menu.append(liHR, liA);
-    // menu.innerHTML += `
-
-    //         <li><hr class="dropdown-divider" /></li>
-    //         <li>
-    //         <a class="dropdown-item" href="#">Get All</a>
-    //         </li>
-    // `;
   });
 }
 
 function paintUI(product) {
   containerUI.innerHTML += `
-            <div class="card col col-3 p-4" style="width: 18rem">
-            <div class="w-50 mx-auto"><img src="${product.image}" class="card-img-top" alt="..." /></div>
-            <div class="card-body">
-                <h5 class="card-title">${product.title}</h5>
+            <div class="card col col-3 col-md-4 col-sm-6 p-4 d-flex flex-column" style="width: 18rem">
+            <div class="w-50 mx-auto flex-fill"><img src="${product.image}" class="card-img-top" alt="..." /></div>
+            <div class="card-body mt-4">
+                <h5 class="card-title fs-6">${product.title}</h5>
                 <p class="small">
-                    ${product.description}
+                    Category: <span class="text-secondary">${product.category}</span>
+                 </p>
+                <p class="small">
+                    Price: <span class="text-secondary">${product.price}$</span>
                 </p>
             </div>
         </div>
